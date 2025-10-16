@@ -1,0 +1,17 @@
+__include__: [
+  '../dataset/coco_detection.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer.yml',
+  './include/rtdetr_r50vd.yml',
+]
+
+output_dir: ./output/rtdetr_r50vd_6x_coco
+
+RTDETRTransformer:
+  infer_adapt: True
+  offset: 140
+  lag: 40
+  alpha: 1.0
+  beta: 0.4
+  gamma: 0.4
